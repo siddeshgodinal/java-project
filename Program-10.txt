@@ -1,0 +1,29 @@
+public class Throw {
+
+    public static void main(String[] args) {
+        try {
+                       throw new RuntimeException("This is a custom exception.");
+        } catch (RuntimeException e) {
+            System.out.println("Caught Exception: " + e.getMessage());
+        }
+    }
+}
+
+
+-------------------------------------------------------------------
+
+import java.io.FileNotFoundException;
+
+public class ThrowsExample {
+
+    public static void main(String[] args) {
+        try {
+            processFile("example.txt");
+        } catch (FileNotFoundException e) {
+            System.out.println("Caught Exception: " + e.getMessage());
+        }
+    }
+    public static void processFile(String fileName) throws FileNotFoundException {
+        throw new FileNotFoundException("File not found: " + fileName);
+    }
+}

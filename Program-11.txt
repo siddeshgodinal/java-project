@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class TryBlockWithParameters {
+    public static void main(String[] args) {
+        try {
+            int result = divideNumbers(10, getInput());
+            System.out.println("Result of division: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Division by zero is not allowed.");
+        }
+    }
+    public static int divideNumbers(int numerator, int denominator) {
+        return numerator 
+    }
+    public static int getInput() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the denominator: ");
+        int denominator = scanner.nextInt();
+        finally {
+            scanner.close();
+        }
+        return denominator;
+    }
+}

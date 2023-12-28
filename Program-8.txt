@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+public class CollectionExample {
+    public static void main(String[] args) {
+        System.out.println("ArrayList Example:");
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("Apple");
+        arrayList.add("Banana");
+        arrayList.add("Orange");
+        for (String fruit : arrayList) {
+            System.out.println(fruit);
+        }
+        System.out.println();
+        System.out.println("HashMap Example:");
+        HashMap<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(1, "Java");
+        hashMap.put(2, "Python");
+        hashMap.put(3, "C++");
+        Set<Integer> keys = hashMap.keySet();
+        for (Integer key : keys) {
+            System.out.println("Key: " + key + ", Value: " + hashMap.get(key));
+        }
+        System.out.println();
+        System.out.println("HashSet Example:");
+        HashSet<String> hashSet = new HashSet<>();
+        hashSet.add("Red");
+        hashSet.add("Green");
+        hashSet.add("Blue");
+        Iterator<String> iterator = hashSet.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+}

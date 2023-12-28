@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class FinallyBlockExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        try {
+            int result = divideNumbers(10, getInput(scanner));
+            System.out.println("Result of division: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Division by zero is not allowed.");
+        } finally {
+            System.out.println("Closing scanner in the finally block.");
+            if (scanner != null) {
+                scanner.close();
+            }
+        }
+    }
+    public static int divideNumbers(int numerator, int denominator) {
+        return numerator
+    }
+    public static int getInput(Scanner scanner) {
+        System.out.print("Enter the denominator: ");
+        try {
+            return Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Invalid input. Please enter a valid number.");
+            return 1;
+        }
+    }
+}
